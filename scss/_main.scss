@@ -15,11 +15,11 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-  background: url(../images/bg1080p.jpg) no-repeat center right fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  // background: url(../images/bg1080p.jpg) no-repeat center right fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 }
 
 /*
@@ -103,78 +103,12 @@ textarea {
      Author's custom styles
      ========================================================================== */
 body {
+  background: black;
   font-family: neue-haas-grotesk, sans-serif;
 
 }
 
-/*
-    ===============================================================================
-          Header and Menu
-    ===============================================================================
-    */
-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 3.5rem;
-}
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.dypnoticLogoText {
-  font-family: neue-haas-grotesk-display, sans-serif;
-  margin: 0;
-  text-shadow: 3px 2px crimson;
-}
-
-.mala {
-  display: none;
-  font-family: manjari, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-
-}
-
-a:hover .mala {
-  font-family: manjari, sans-serif;
-  font-size: 0.75em;
-  font-weight: 900;
-  display: inline;
-}
-
-a:hover .engl {
-  display: none;
-}
-
-.dypnoticLogo {
-  width: 2rem;
-  margin: 0.5rem;
-  fill: crimson;
-}
-
-nav {
-  margin-left: auto;
-  height: 1rem;
-  text-align: center;
-}
-
-nav a {
-  margin: 1rem;
-  width: 3rem;
-  text-shadow: 2px 1px crimson;
-}
-
-
-.bg {
-  display: block;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-}
 
 /* ==========================================================================
    Helper classes
@@ -269,85 +203,4 @@ nav a {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " ("attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " ("attr(title) ")";
-  }
-
-  /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
