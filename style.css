@@ -57,8 +57,22 @@ nav ul {
 	}
 }
 
+figure {
+	margin-inline: 16px;
+
+	@media (min-width: 500px) {
+	  margin-inline: 40px;
+	}
+
+}
+
 blockquote {
 	white-space: pre-wrap;
+	margin-inline: 0;
+
+	@media (min-width: 500px) {
+	  margin-inline: 40px;
+	}
 }
 
 figcaption {
