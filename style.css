@@ -1,5 +1,9 @@
 html {
-	background: #011;
+	--bg: #eef;
+	--fg: #112;
+	--prime: #c00;
+	--subtext: #667;
+	background: var(--bg);
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -7,7 +11,7 @@ html {
 
 a,
 html {
-	color: #fee;
+	color: var(--fg);
 }
 
 h1, h2 {
@@ -15,17 +19,14 @@ h1, h2 {
 	margin: 0;
 	border-radius: 4px;
 	letter-spacing: 3px;
-	text-shadow:
-		3px 0 1px #c00,
-		-3px 0 1px #03c;
 }
 
 ruby {
-	color: #c00;
+	color: var(--prime);
 }
 
 rt {
-	color: #fee;
+	color: var(--subtext);
 	font-size: .7rem;
 }
 
@@ -33,7 +34,8 @@ rt {
 	font-size: 0.8rem;
 	text-shadow: none;
 	letter-spacing: 0;
-	color: #cbb;
+	margin-bottom: 4px;
+	color: var(--subtext);
 }
 
 body {
