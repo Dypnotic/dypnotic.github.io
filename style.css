@@ -17,6 +17,10 @@ body {
 	width: 100%;
 }
 
+[lang=ja]{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 
 a,
 html {
