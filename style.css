@@ -10,17 +10,18 @@ html {
 }
 
 body {
-	font: .8125rem 'JetBrains Mono', monospace;
 	display: table;
 	padding: 24px;
 	max-width: 70ch;
 	width: 100%;
 }
 
-[lang=ja]{
-	font-family: Arial, Helvetica, sans-serif;
-}
 
+
+::selection {
+	color: #fff;
+	background: var(--prime);
+}
 
 a,
 html {
@@ -33,7 +34,7 @@ h1, h2 {
 	letter-spacing: 2px;
 }
 
-strong {
+strong, em, cite {
 	color: #00c;
 }
 
@@ -77,7 +78,7 @@ figure {
 }
 
 blockquote {
-	white-space: pre-wrap;
+	white-space: pre-line;
 	margin-inline: 0;
 
 	@media (min-width: 500px) {
