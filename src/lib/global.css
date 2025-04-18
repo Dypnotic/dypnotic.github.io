@@ -1,0 +1,192 @@
+/* latin regular*/
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	font-display: swap;
+	src:
+		url(https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2) format("woff2"),
+		url(https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff) format("woff");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+		U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin bold*/
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 700;
+	font-stretch: 100%;
+	font-display: swap;
+	src:
+		url(https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2) format("woff2"),
+		url(https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff) format("woff");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+		U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin italic*/
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: italic;
+	font-weight: 400;
+	font-stretch: 100%;
+	font-display: swap;
+	src:
+		url(https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-400-italic.woff2) format("woff2"),
+		url(https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-400-italic.woff) format("woff");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+		U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+	/* Colors */
+	--bg: #f1f1f5;
+	--fg: #131;
+	--primary: #c00;
+	--secondary: #00c;
+	--subtext: #667;
+
+	/* Sizes */
+	--font-size-s: 0.75rem;
+	--font-size-m: 0.8125rem;
+	--font-size-l: 1rem;
+	--font-size-xl: 1.125rem;
+	--font-size-2xl: 1.3125rem;
+	--font-size-3xl: 1.5rem;
+	--font-size-4xl: 2.652rem;
+	--font-size-5xl: 4rem;
+
+	--distance-2xs: 2px;
+	--distance-xs: 4px;
+	--distance-s: 8px;
+	--distance-m: 16px;
+	--distance-l: 32px;
+	--distance-xl: 64px;
+	--distance-2xl: 128px;
+
+	--delay-fast: .2s;
+
+	--max-text-width: 70ch;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+[lang="en"] {
+	font:
+		var(--font-size-m) "JetBrains Mono",
+		monospace;
+}
+
+[lang="ja"] {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	padding: 20px;
+	color: var(--fg);
+}
+
+input,
+textarea,
+button {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+::selection {
+	color: #fff;
+	background: var(--primary);
+}
+
+h1,
+h2 {
+	padding: .67em 0 .1em 0;
+	margin: 0;
+	letter-spacing: var(--distance-2xs);
+	display: flex;
+	flex-direction: column;
+}
+
+strong,
+em,
+cite {
+	color: var(--secondary);
+}
+
+ruby {
+	color: var(--primary);
+}
+
+rt {
+	color: var(--subtext);
+	font-size: 0.7em;
+}
+
+.translation {
+	font-size: 0.6em;
+	text-shadow: none;
+	letter-spacing: 0;
+	margin-bottom: var(--distance-xs);
+	color: var(--subtext);
+}
+
+a:not(:has(img, svg))  {
+	text-decoration: none;
+	color: inherit;
+	font-weight: bold;
+
+	&::before {
+		content: ">";
+		padding-right: var(--distance-s);
+	}
+
+}
+
+button {
+	font-weight: bold;
+	padding: var(--distance-s) var(--distance-m);
+	border-radius: var(--distance-2xs);
+	border: var(--distance-2xs) ridge var(--fg);
+	background-color: var(--bg);
+	cursor: pointer;
+	text-shadow: 0 0 0 var(--bg);
+	transition: background-color var(--delay-fast) ease,
+							border var(--delay-fast) ease,
+							color var(--delay-fast) ease,
+							text-shadow var(--delay-fast) ease;
+
+	&::before {
+		content: ">";
+		padding-right: var(--distance-s);
+	}
+
+	&:hover {
+		background-color: var(--primary);
+		border: var(--distance-2xs) solid var(--primary);
+		color: white;
+		text-shadow: 0 0 var(--distance-xs) white;
+	}
+}
+
+figure {
+	margin-inline: var(--distance-m);
+
+	@media (min-width: 500px) {
+		margin-inline: var(--distance-l);
+	}
+}
+
+figcaption {
+	text-align: right;
+}
